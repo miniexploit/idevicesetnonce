@@ -8,7 +8,7 @@ idevicesetnonce - An utility for setting nonce on checkm8-vulnerable devices
 usage: idevicesetnonce <iOS version> <SHSH blob>
     <iOS version>		The iOS version about to restored to
     <SHSH blob>		SHSH blob used for restoring
-Version: 0.1
+Version: XX
 Source code: https://github.com/Mini-Exploit/idevicesetnonce
 Report issue: https://github.com/Mini-Exploit/idevicesetnonce/issue
 ```
