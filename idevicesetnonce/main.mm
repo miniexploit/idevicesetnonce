@@ -2,7 +2,7 @@
 //  main.m
 //  idevicesetnonce
 //
-//  Created by macbookair on 5/31/22.
+//  Created by MiniExploit on 5/31/22.
 //
 
 #include <iostream>
