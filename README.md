@@ -21,6 +21,7 @@ Requirements for compiling:
 * [libirecovery](https://github.com/libimobiledevice/libirecovery)
 * [img4tool](http://github.com/tihmstar/img4tool)
 * [libfragmentzip](https://github.com/tihmstar/libfragmentzip)
+
 Then, just open `idevicesetnonce.xcodeproj` then click `Build`
 **NOTE**: You cannot compile idevicesetnonce statically from the source
  
