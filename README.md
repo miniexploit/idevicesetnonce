@@ -7,9 +7,9 @@ The statically compiled version of idevicesetnonce can be found [here](https://g
 idevicesetnonce - An utility for setting nonce on checkm8-vulnerable devices
 Statically compiled: yes
 usage: idevicesetnonce <iOS version> <SHSH blob> [-d]
-    <iOS version>           The iOS version about to restored to
-    <SHSH blob>         SHSH blob used for restoring
-    -d          Print more information during process
+    <iOS version>			Target iOS version to downgrade to
+    <SHSH blob>			SHSH blob used for restoring
+    -d			Print more information during process
 Source code: https://github.com/Mini-Exploit/idevicesetnonce
 Report issue: https://github.com/Mini-Exploit/idevicesetnonce/issue
 ```
