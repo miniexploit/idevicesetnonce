@@ -1,7 +1,7 @@
 # idevicesetnonce
 An utility for setting nonce on checkm8-vulnerable devices
 ## Download
-* The statically compiled version of idevicesetnonce can be found [here](https://github.com/Mini-Exploit/idevicesetnonce/releases/latest)
+The statically compiled version of idevicesetnonce can be found [here](https://github.com/Mini-Exploit/idevicesetnonce/releases/latest)
 ## Usage
 ```
 idevicesetnonce - An utility for setting nonce on checkm8-vulnerable devices
