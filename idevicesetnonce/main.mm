@@ -30,6 +30,15 @@ std::pair<char*, size_t> get_ap_img4_ticket_from_shsh(const char *path) {
 }
  
 int parse_argument(int argc, const char * argv[], const char **firstArg, const char **secondArg) {
+    if(argc < 3) {
+        printf("usage: idevicesetnonce <iOS version> <SHSH blob> [-d]\n");
+        printf("    <iOS version>\t\t\tTarget iOS version to downgrade to\n");
+        printf("    <SHSH blob>\t\t\tSHSH blob used for restoring\n");
+        printf("    -d\t\t\tPrint more information during process\n");
+        printf("Source code: https://github.com/Mini-Exploit/idevicesetnonce\n");
+        printf("Report issue: https://github.com/Mini-Exploit/idevicesetnonce/issue\n");
+        return 1;
+    }
     for(int i = 0; i < argc; i++) {
         if(!strcmp(argv[i], "-d")) {
             idevicesetnonce_debug = 1;
@@ -40,7 +49,7 @@ int parse_argument(int argc, const char * argv[], const char **firstArg, const c
     }
     *firstArg = argv[1];
     *secondArg = argv[2];
-    return argc-1;
+    return 0;
 }
 
 int main(int argc, const char * argv[]) {
@@ -56,15 +65,7 @@ int main(int argc, const char * argv[]) {
     const char *generator = NULL;
     const char *blob_path = NULL;
     
-    if(argc < 3) {
-        printf("usage: idevicesetnonce <iOS version> <SHSH blob> [-d]\n");
-        printf("    <iOS version>\t\t\tThe iOS version about to restored to\n");
-        printf("    <SHSH blob>\t\t\tSHSH blob used for restoring\n");
-        printf("    -d\t\t\tPrint more information during process\n");
-        printf("Source code: https://github.com/Mini-Exploit/idevicesetnonce\n");
-        printf("Report issue: https://github.com/Mini-Exploit/idevicesetnonce/issue\n");
-        return 1;
-    }
+    if(parse_argument(argc, argv, &version, &blob_path)) return 1;
     
     printf("Waiting for DFU device...\n");
     usbdev = new usb(client, device);
