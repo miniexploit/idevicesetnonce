@@ -28,6 +28,6 @@ Then, just open `idevicesetnonce.xcodeproj` then click `Build`
  
 ## Credits
 * [kairos](https://github.com/dayt0n/kairos)
-* [api.m1sta.xyz](api.m1sta.xyz)
-* [api.ipsw.me](api.ipsw.me)
+* [api.m1sta.xyz](https://api.m1sta.xyz)
+* [api.ipsw.me](https://api.ipsw.me/v2.1)
 
