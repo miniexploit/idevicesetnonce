@@ -84,11 +84,11 @@ int main(int argc, const char * argv[]) {
     
     std::pair<char*, size_t> blob;
     generator = get_generator_from_shsh(blob_path);
-    debug("Got generator from SHSH: %s", generator);
     if(!generator) {
         error("ERROR: Failed to get generator from SHSH\n");
         return -1;
     }
+    debug("Got generator from SHSH: %s", generator);
     
     char *buildid = get_ipsw_info(product_type, version, "buildid");
     if(!buildid) {
@@ -185,7 +185,7 @@ int main(int argc, const char * argv[]) {
         blob = get_ap_img4_ticket_from_shsh(blob_path);
         res = pack_img4(ibec, ibec_len, blob.first, blob.second, &ibec, &ibec_len);
         if(res != 0) {
-            printf("ERROR: Failed to pack iBEC\n");
+            error("ERROR: Failed to pack iBEC\n");
             return -1;
         }
         printf("Sending iBEC\n");
